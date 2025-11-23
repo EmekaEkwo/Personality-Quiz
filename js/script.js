@@ -1,21 +1,20 @@
-// Simple log so you can quickly confirm the file is connected
+
 console.log("script.js connected!");
 
-// Wait until the DOM is fully loaded (good habit, even with script at the bottom)
+
 document.addEventListener("DOMContentLoaded", function () {
   const questionBlocks = document.querySelectorAll(".question-block");
   const showResultButton = document.getElementById("show-result");
   const resultContainer = document.getElementById("result-container");
   const resultText = document.getElementById("result-text");
 
-  // Store user's answers here: { "question-1": "A", "question-2": "B", ... }
+
   const selectedAnswers = {};
 
-  // Attach click handlers to every answer button in every question block
   questionBlocks.forEach(function (block, index) {
     const buttons = block.querySelectorAll(".answer-btn");
 
-    // Give each block a question id if it doesn't already have one
+
     const questionId = block.id || `question-${index + 1}`;
 
     buttons.forEach(function (button) {
@@ -32,13 +31,11 @@ document.addEventListener("DOMContentLoaded", function () {
         const answerCode = button.dataset.answer; // "A", "B", "C", or "D"
         selectedAnswers[questionId] = answerCode;
 
-        // Handy for debugging in the console while you test
-        // console.log("Current answers:", selectedAnswers);
       });
     });
   });
 
-  // Map each answer letter to a description
+s
   const resultDetails = {
     A: {
       title: "Playmaker",
