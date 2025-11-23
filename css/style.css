@@ -1,6 +1,20 @@
+/* Highlight the selected answer button */
 .selected {
     background-color: #007bff;
     color: white;
     border-color: #007bff;
 }
-  
+
+/* Small extra styling to make the quiz look a bit cleaner */
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.question-block {
+    border: none;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.05);
+}
+
+#result-container {
+    text-align: center;
+}
